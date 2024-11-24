@@ -82,3 +82,27 @@ int removeDuplicates(int* nums, int numsSize) {
     nums[k] = nums[i];
     return k + 1;
 }
+
+//4.找到数组中的多数元素（默认其个数大于n/2）
+int majorityElement(int* nums, int numsSize) {
+    int i = 0;
+    int count = 1;
+    int M = nums[0];
+    for (i = 1; i < numsSize; i++)
+    {
+        if (nums[i] != M)
+        {
+            count--;
+        }
+        else if (nums[i] == M)
+        {
+            count++;
+        }
+        if (count == 0)
+        {
+            M = nums[i];
+            count = 1;
+        }
+    }
+    return M;
+}
