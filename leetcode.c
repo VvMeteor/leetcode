@@ -106,3 +106,32 @@ int majorityElement(int* nums, int numsSize) {
     }
     return M;
 }
+
+//5.找到最佳的买股时间
+int maxProfit(int* prices, int pricesSize) {
+    int sell = 0;
+    int get = 0;
+    int j = 1;
+    int buy = 0;
+    while (j <= pricesSize - 1)
+    {
+        sell = prices[j];
+        if (j == 1)
+        {
+            buy = prices[0];
+        }
+        else
+        {
+            if (prices[j - 1] <= buy)
+            {
+                buy = prices[j - 1];
+            }
+        }
+        if ((sell - buy) >= get)
+        {
+            get = sell - buy;
+        }
+        j++;
+    }
+    return get;
+}
