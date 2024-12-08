@@ -209,3 +209,29 @@
 //    }
 //    return strs[0];
 //}
+
+//8.找到最开始匹配的下标
+int strStr(char* haystack, char* needle) {
+    int len1 = strlen(haystack);
+    int len2 = strlen(needle);
+    int k = 0;
+    int n = 0;
+    int i = 0;
+    while (n < len1)
+    {
+        if (haystack[i] == needle[k])
+        {
+            i++, k++;
+            if (k == len2)
+            {
+                return i - len2;
+            }
+        }
+        else
+        {
+            k = 0;
+            i = ++n;
+        }
+    }
+    return -1;
+}
