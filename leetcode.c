@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-
+#include<stdbool.h>
+#include<string.h>
 //1.合并两个有序数组
 //void merge(int* nums1, int m, int* nums2, int n) {
 //    int i = 0;
@@ -211,27 +212,55 @@
 //}
 
 //8.找到最开始匹配的下标
-int strStr(char* haystack, char* needle) {
-    int len1 = strlen(haystack);
-    int len2 = strlen(needle);
-    int k = 0;
-    int n = 0;
-    int i = 0;
-    while (n < len1)
-    {
-        if (haystack[i] == needle[k])
-        {
-            i++, k++;
-            if (k == len2)
-            {
-                return i - len2;
-            }
-        }
-        else
-        {
-            k = 0;
-            i = ++n;
-        }
-    }
-    return -1;
-}
+//int strStr(char* haystack, char* needle) {
+//    int len1 = strlen(haystack);
+//    int len2 = strlen(needle);
+//    int k = 0;
+//    int n = 0;
+//    int i = 0;
+//    while (n < len1)
+//    {
+//        if (haystack[i] == needle[k])
+//        {
+//            i++, k++;
+//            if (k == len2)
+//            {
+//                return i - len2;
+//            }
+//        }
+//        else
+//        {
+//            k = 0;
+//            i = ++n;
+//        }
+//    }
+//    return -1;
+//}
+
+//9.判断回文串
+//bool isPalindrome(char* s) {
+//    size_t len = strlen(s);
+//    int k = 0;
+//    for (int i = 0; i < len; i++)
+//    {
+//        if (s[i] >= 65 && s[i] <= 90)
+//        {
+//            s[k++] = s[i]+32;
+//        }
+//        else if (s[i] >= 97 && s[i] <= 122)
+//        {
+//            s[k++] = s[i];
+//        }
+//    }
+//    int left = 0;
+//    int right = k - 1;
+//    while (left < right)
+//    {
+//        if (s[left] != s[right])
+//        {
+//            return false;
+//        }
+//        left++, right--;
+//    }
+//    return true;
+//}
