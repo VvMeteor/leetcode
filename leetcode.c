@@ -264,3 +264,74 @@
 //    }
 //    return true;
 //}
+
+//10.判断子序列
+//bool isSubsequence(char* s, char* t) {
+//    int i = 0;
+//    int j = 0;
+//    while (j < strlen(t))
+//    {
+//        if (s[i] == t[j])
+//        {
+//            i++;
+//        }
+//        j++;
+//    }
+//    if (i == strlen(s) || strlen(s) == 0)
+//    {
+//        return true;
+//    }
+//    return false;
+//}
+
+//11.赎金信（C++）
+//class Solution {
+//public:
+//    bool canConstruct(string ransomNote, string magazine) {
+//        map<char, int>mymap;
+//        for (char i = 'a'; i <= 'z'; i++)
+//        {
+//            mymap[i] = 0;
+//        }
+//        for (int j = 0; j < magazine.size(); j++)
+//        {
+//            mymap[magazine[j]] += 1;
+//        }
+//        for (int n = 0; n < ransomNote.size(); n++)
+//        {
+//            mymap[ransomNote[n]] -= 1;
+//        }
+//        for (char k = 'a'; k <= 'z'; k++)
+//        {
+//            if (mymap[k] < 0)
+//            {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//};
+
+//12.同构字符串
+//#include<map>
+//class Solution {
+//public:
+//    bool isIsomorphic(string s, string t) {
+//        map<char, char>mymap1;
+//        map<char, char>mymap2;
+//
+//        for (int k = 0; k < t.size(); k++)
+//        {
+//            mymap1[s[k]] = t[k];
+//            mymap2[t[k]] = s[k];
+//        }
+//        for (int n = 0; n < t.size(); n++)
+//        {
+//            if (mymap1[s[n]] != t[n] || mymap2[t[n]] != s[n])
+//            {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//};
