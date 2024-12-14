@@ -335,3 +335,52 @@
 //        return true;
 //    }
 //};
+
+//13.单词规律
+//std::vector<std::string> split(const std::string& str, char delimiter) {
+//    std::vector<std::string> tokens;
+//    std::string token;
+//    std::istringstream tokenStream(str);
+//    while (std::getline(tokenStream, token, delimiter)) {
+//        tokens.push_back(token);
+//    }
+//    // 如果字符串以分隔符结尾，会添加一个空字符串，需要去除
+//    if (!tokens.empty() && tokens.back().empty()) {
+//        tokens.pop_back();
+//    }
+//    return tokens;
+//}
+//class Solution {
+//public:
+//    bool wordPattern(string pattern, string s) {
+//        map<char, string>mymap1;
+//        map<string, char>mymap2;
+//
+//        size_t k = 0;
+//        char delimiter = ' ';
+//        vector<string> tokens = split(s, delimiter);
+//        int i = 0;
+//        if (pattern.size() != tokens.size())
+//        {
+//            return false;
+//        }
+//        if (pattern.size() != tokens.size())
+//        {
+//            return false;
+//        }
+//        while (k < pattern.size())
+//        {
+//            mymap1[pattern[k]] = tokens[k];
+//            mymap2[tokens[k]] = pattern[k];
+//            k++;
+//        }
+//        for (int j = 0; j < pattern.size(); j++)
+//        {
+//            if (mymap1[pattern[j]] != tokens[j] || mymap2[tokens[j]] != pattern[j])
+//            {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//};
