@@ -384,3 +384,24 @@
 //        return true;
 //    }
 //};
+
+//14.两数之和
+//int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+//    int k = 0;
+//    while (k < numsSize)
+//    {
+//        for (int j = k + 1; j < numsSize; j++)
+//        {
+//            if (nums[j] + nums[k] == target)
+//            {
+//                int* ret = malloc(8);
+//                ret[0] = k, ret[1] = j;
+//                *returnSize = 2;
+//                return ret;
+//            }
+//        }
+//        k++;
+//    }
+//    return returnSize;
+//}
+
