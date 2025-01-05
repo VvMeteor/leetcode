@@ -405,3 +405,46 @@
 //    return returnSize;
 //}
 
+//15.判断是不是快乐数
+//bool isHappy(int n) {
+//    int sum = 0;
+//    int count = 0;
+//    if (n == 1)
+//    {
+//        return true;
+//    }
+//    while (sum != 1)
+//    {
+//        sum = 0;
+//        while (n > 0)
+//        {
+//            sum += (n % 10) * (n % 10);
+//            n /= 10;
+//        }
+//        count++;
+//        if (count > 20)
+//        {
+//            return false;
+//        }
+//        n = sum;
+//    }
+//    return true;
+//}
+
+//16.重复元素下标之差
+//class Solution {
+//public:
+//    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+//        map<int, int>hashmap;
+//        for (int i = 0; i < nums.size(); i++)
+//        {
+//            if (hashmap.count(nums[i]) && i - hashmap[nums[i]] <= k)
+//            {
+//                return true;
+//            }
+//            hashmap[nums[i]] = i;
+//
+//        }
+//        return false;
+//    }
+//};
